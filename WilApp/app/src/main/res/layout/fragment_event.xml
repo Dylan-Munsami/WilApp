@@ -1,0 +1,197 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="32dp">
+
+        <!-- 🔶 Logo -->
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="App Logo"
+            />
+
+        <!-- 🔶 Page Title -->
+        <TextView
+            android:id="@+id/textEvent"
+            android:text="Upcoming Events"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/BaseYellow"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- 🔶 Subtitle -->
+        <TextView
+            android:text="Join hands with us and make an impact in your community."
+            android:textSize="14sp"
+            android:textColor="@color/dark_gray"
+            android:textAlignment="center"
+            android:layout_marginBottom="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 🔸 Event 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="#FFF8E1"
+
+            android:padding="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Community Food Drive"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Join us in delivering food to those in need. 📅 July 20, 2025"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_gray"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnJoinEvent1"
+                    android:text="Join Event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cornerRadius="16dp"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/Base" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 🔸 Event 2 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="#FFF8E1"
+
+            android:padding="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Volunteer Training Session"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Learn how to make a difference! 📅 July 25, 2025"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_gray"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnJoinEvent2"
+                    android:text="Join Event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cornerRadius="16dp"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/Base" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 🔸 Event 3 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="#FFF8E1"
+
+            android:padding="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Annual Fundraising Gala"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Help us raise funds for our programs! 📅 August 1, 2025"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_gray"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnJoinEvent3"
+                    android:text="Join Event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cornerRadius="16dp"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/Base" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 💬 Footer -->
+        <TextView
+            android:text="Have an idea for an event? We'd love to hear from you!"
+            android:textSize="14sp"
+            android:textColor="@color/dark_gray"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="events@icnorath.org"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="vcmsa.projects.wilapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_aboutus"
+        android:name="vcmsa.projects.wilapp.ui.aboutus.AboutUsFragment"
+        android:label="@string/menu_aboutus"
+        tools:layout="@layout/fragment_aboutus" />
+
+    <fragment
+        android:id="@+id/nav_volunteer"
+        android:name="vcmsa.projects.wilapp.ui.volunteer.VolunteerFragment"
+        android:label="@string/menu_volunteer"
+        tools:layout="@layout/fragment_volunteer" />
+
+    <fragment
+        android:id="@+id/nav_donation"
+        android:name="vcmsa.projects.wilapp.ui.donation.DonationFragment"
+        android:label="@string/menu_donation"
+        tools:layout="@layout/fragment_donation" />
+
+    <fragment
+        android:id="@+id/nav_event"
+        android:name="vcmsa.projects.wilapp.ui.event.EventFragment"
+        android:label="@string/menu_event"
+        tools:layout="@layout/fragment_event" />
+
+    <fragment
+        android:id="@+id/nav_oursocials"
+        android:name="vcmsa.projects.wilapp.ui.oursocials.OurSocialsFragment"
+        android:label="@string/menu_oursocials"
+        tools:layout="@layout/fragment_oursocials" />
+</navigation>
