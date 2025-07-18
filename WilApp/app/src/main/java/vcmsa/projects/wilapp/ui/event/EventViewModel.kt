@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class EventViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is Event Fragment"
+        value = ""
     }
     val text: LiveData<String> = _text
 }

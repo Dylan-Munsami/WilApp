@@ -12,7 +12,7 @@
         android:gravity="center_horizontal"
         android:paddingBottom="32dp">
 
-        <!-- Logo -->
+
         <ImageView
             android:layout_width="160dp"
             android:layout_height="100dp"
@@ -54,7 +54,7 @@
 
         <!-- Vision Section -->
         <TextView
-            android:text="Our Vision 🌈"
+            android:text="Our Vision"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/BaseYellow"
@@ -117,29 +117,7 @@
             android:layout_marginBottom="24dp"
             android:padding="20dp">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="🌍 12,000+ Meals Delivered"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="10dp"
-                    android:textColor="@color/BaseYellow" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="👥 300+ Volunteers Nationwide"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/BaseYellow" />
-            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Call to Action -->
