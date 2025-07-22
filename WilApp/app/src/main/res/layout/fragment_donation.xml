@@ -12,14 +12,7 @@
         android:gravity="center_horizontal"
         android:paddingBottom="32dp">
 
-        <!-- App Logo -->
-        <ImageView
-            android:layout_width="160dp"
-            android:layout_height="100dp"
-            android:src="@drawable/logo"
-            android:adjustViewBounds="true"
-            android:layout_marginBottom="16dp"
-            android:contentDescription="Logo" />
+
 
         <!-- Heading -->
         <TextView

@@ -29,5 +29,7 @@
             android:id="@+id/nav_oursocials"
             android:icon="@drawable/socialmedia"
             android:title="@string/menu_oursocials" />
+
+
     </group>
 </menu>

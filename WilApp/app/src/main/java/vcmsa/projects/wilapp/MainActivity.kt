@@ -31,22 +31,31 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null)
                 .setAnchorView(R.id.fab).show()
         }
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
+        // Update AppBarConfiguration to include the new fragments
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_aboutus, R.id.nav_volunteer, R.id.nav_donation, R.id.nav_event, R.id.nav_oursocials
-            ), drawerLayout
+                R.id.nav_home,
+                R.id.nav_aboutus,
+                R.id.nav_volunteer,
+                R.id.nav_donation,
+                R.id.nav_event,
+                R.id.nav_oursocials,
+                R.id.nav_register, // Add login fragment
+                R.id.nav_login // Add register fragment
+            ),
+            drawerLayout
         )
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
     }

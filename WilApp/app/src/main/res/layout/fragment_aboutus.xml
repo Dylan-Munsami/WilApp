@@ -13,13 +13,6 @@
         android:paddingBottom="32dp">
 
 
-        <ImageView
-            android:layout_width="160dp"
-            android:layout_height="100dp"
-            android:src="@drawable/logo"
-            android:adjustViewBounds="true"
-            android:layout_marginBottom="20dp"
-            android:contentDescription="Logo" />
 
         <!-- Heading -->
         <TextView

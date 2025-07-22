@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        tools:ignore="ExtraText">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/home"
@@ -28,5 +29,6 @@
             android:id="@+id/nav_oursocials"
             android:icon="@drawable/socialmedia"
             android:title="@string/menu_oursocials" />
+
     </group>
 </menu>
