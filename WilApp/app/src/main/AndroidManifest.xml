@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WilApp"
         tools:targetApi="31">
+
+        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -19,10 +21,41 @@
             android:theme="@style/Theme.WilApp.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity
+            android:name=".ui.assistance.ReqForAssistance"
+            android:exported="false"
+            android:label="Request Assistance"
+            android:theme="@style/Theme.WilApp" />
+
+        <activity
+            android:name=".ui.assistance.DisasterResponseActivity"
+            android:exported="false"
+            android:label="Disaster Response"
+            android:theme="@style/Theme.WilApp" />
+
+        <activity
+            android:name=".ui.assistance.ImmediateResponseActivity"
+            android:exported="false"
+            android:label="Immediate Response"
+            android:theme="@style/Theme.WilApp" />
+
+        <activity
+            android:name=".ui.assistance.DonationResponseActivity"
+            android:exported="false"
+            android:label="Donation Response"
+            android:theme="@style/Theme.WilApp" />
+
+        <activity
+            android:name=".ui.assistance.GeneralInquiriesActivity"
+            android:exported="false"
+            android:label="General Inquiries"
+            android:theme="@style/Theme.WilApp" />
+
     </application>
 
 </manifest>

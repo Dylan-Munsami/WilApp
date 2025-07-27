@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_login">
 
+    <!-- Existing fragments -->
     <fragment
         android:id="@+id/nav_home"
         android:name="vcmsa.projects.wilapp.ui.home.HomeFragment"
@@ -40,14 +40,42 @@
         android:name="vcmsa.projects.wilapp.ui.oursocials.OurSocialsFragment"
         android:label="@string/menu_oursocials"
         tools:layout="@layout/fragment_oursocials" />
+
     <fragment
         android:id="@+id/nav_login"
         android:name="vcmsa.projects.wilapp.ui.login.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login" />
+
     <fragment
         android:id="@+id/nav_register"
         android:name="vcmsa.projects.wilapp.ui.register.RegisterFragment"
         android:label="Register"
         tools:layout="@layout/fragment_register" />
+
+    <activity
+        android:id="@+id/nav_request_assistance"
+        android:name="vcmsa.projects.wilapp.ui.assistance.ReqForAssistance"
+        android:label="Request Assistance"
+        tools:layout="@layout/fragment_request_assistance" />
+
+
+    <fragment
+        android:id="@+id/nav_zapper"
+        android:name="vcmsa.projects.wilapp.ui.donation.ZapperFragment"
+        android:label="Zapper Payment"
+        tools:layout="@layout/fragment_zapper" />
+
+    <fragment
+        android:id="@+id/nav_paypal"
+        android:name="vcmsa.projects.wilapp.ui.donation.PaypalFragment"
+        android:label="PayPal Payment"
+        tools:layout="@layout/fragment_paypal" />
+
+    <fragment
+        android:id="@+id/nav_eft"
+        android:name="vcmsa.projects.wilapp.ui.donation.EftFragment"
+        android:label="Bank Transfer (EFT)"
+        tools:layout="@layout/fragment_eft" />
+
 </navigation>

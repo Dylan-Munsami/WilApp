@@ -7,14 +7,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import vcmsa.projects.wilapp.R
 import vcmsa.projects.wilapp.databinding.FragmentDonationBinding
 
 class DonationFragment : Fragment() {
 
     private var _binding: FragmentDonationBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -32,7 +31,24 @@ class DonationFragment : Fragment() {
         donationViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.cardZapper.setOnClickListener {
+            findNavController().navigate(R.id.nav_zapper)
+        }
+
+        binding.cardPaypal.setOnClickListener {
+            findNavController().navigate(R.id.nav_paypal)
+        }
+
+        binding.cardEft.setOnClickListener {
+            findNavController().navigate(R.id.nav_eft)
+        }
     }
 
     override fun onDestroyView() {

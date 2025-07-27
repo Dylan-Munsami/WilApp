@@ -29,6 +29,10 @@
             android:id="@+id/nav_oursocials"
             android:icon="@drawable/socialmedia"
             android:title="@string/menu_oursocials" />
+        <item
+            android:id="@+id/nav_request_assistance"
+            android:title="request assistance"
+            android:iconTint="@color/Base"/>
 
     </group>
 </menu>

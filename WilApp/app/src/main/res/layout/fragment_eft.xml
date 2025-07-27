@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bank Transfer (EFT)"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/BaseYellow"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Bank Details Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFF8E1"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bank Details"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bank: Standard Bank\nAccount Name: I.C. Norath Trust\nAccount Number: 1234567890\nBranch Code: 123456"
+                    android:textSize="16sp"
+                    android:textColor="@color/dark_gray"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reference: YourName + WILAPP"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Base"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Copy Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopyDetails"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Copy Bank Details"
+            android:textColor="@android:color/white"
+            app:cornerRadius="8dp"
+            android:backgroundTint="@color/Base"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Instructions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How to complete your donation:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Use the details above to make an EFT payment\n2. Use the reference exactly as shown\n3. Email proof of payment to donations@icnorath.org"
+            android:textSize="16sp"
+            android:textColor="@color/dark_gray"
+            android:lineSpacingExtra="4dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConfirmTransfer"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="I've Completed the Transfer"
+            android:textColor="@android:color/white"
+            app:cornerRadius="8dp"
+            android:backgroundTint="@color/Base"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

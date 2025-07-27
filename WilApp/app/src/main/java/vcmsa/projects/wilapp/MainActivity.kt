@@ -45,8 +45,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_donation,
                 R.id.nav_event,
                 R.id.nav_oursocials,
-                R.id.nav_register, // Add login fragment
-                R.id.nav_login // Add register fragment
+                R.id.nav_register,
+                R.id.nav_login,
+             R.id.nav_paypal,
+                R.id.nav_eft,
+                R.id.nav_zapper
             ),
             drawerLayout
         )

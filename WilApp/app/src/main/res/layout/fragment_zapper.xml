@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay with Zapper"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/BaseYellow"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_zapper"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How to pay with Zapper:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Open the Zapper app\n2. Tap 'Scan to Pay'\n3. Point your camera at this code\n4. Confirm the amount and pay"
+            android:textSize="16sp"
+            android:textColor="@color/dark_gray"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="24dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment will be processed to:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I.C. Norath Charitable Trust\nReference: DONATION123"
+            android:textSize="16sp"
+            android:textColor="@color/dark_gray"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="24dp"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCompletePayment"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="I've Completed Payment"
+            android:textColor="@android:color/white"
+            app:cornerRadius="8dp"
+            android:backgroundTint="@color/Base"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</ScrollView>
