@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -38,6 +39,7 @@ class DonationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Payment method navigation
         binding.cardZapper.setOnClickListener {
             findNavController().navigate(R.id.nav_zapper)
         }
@@ -49,6 +51,25 @@ class DonationFragment : Fragment() {
         binding.cardEft.setOnClickListener {
             findNavController().navigate(R.id.nav_eft)
         }
+
+        // Slider logic: live update text + fill input field
+        binding.seekBarAmount.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                val amount = progress + 50 // Start at R50
+                val meals = amount / 50    // R50 = 1 person
+                binding.tvSliderFeedback.text = "You're donating R$amount — that feeds $meals ${if (meals == 1) "person" else "people"}!"
+                binding.editAmount.setText(amount.toString())
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
+
+        // Optional: initialize feedback on load
+        val initialAmount = binding.seekBarAmount.progress + 50
+        val initialMeals = initialAmount / 50
+        binding.tvSliderFeedback.text = "You're donating R$initialAmount — that feeds $initialMeals ${if (initialMeals == 1) "person" else "people"}!"
+        binding.editAmount.setText(initialAmount.toString())
     }
 
     override fun onDestroyView() {

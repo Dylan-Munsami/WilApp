@@ -1,5 +1,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -11,242 +12,195 @@
         android:orientation="vertical"
         android:padding="24dp">
 
-        <!-- Header Section -->
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <TextView
+            android:id="@+id/textDonation"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginBottom="24dp">
+            android:text="Make a Donation"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/BaseYellow"
+            android:fontFamily="sans-serif-medium"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            tools:ignore="InvalidId" />
 
-            <TextView
-                android:id="@+id/textDonation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Make a Donation"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                android:textColor="@color/BaseYellow"
-                android:fontFamily="sans-serif-medium"
-                android:lineHeight="32sp"
-                android:includeFontPadding="false"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Your support changes lives"
-                android:textSize="16sp"
-                android:textColor="@color/dark_gray"
-                android:layout_marginTop="8dp"
-                android:lineHeight="24sp"
-                android:includeFontPadding="false"/>
-        </LinearLayout>
 
-        <!-- Original Image -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your support changes lives"
+            android:textSize="16sp"
+            android:textColor="@color/dark_gray"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="200dp"
             android:src="@drawable/thumbs"
             android:scaleType="centerCrop"
-            android:layout_marginBottom="24dp"
-            android:contentDescription="Community receiving aid"/>
+            android:contentDescription="Donation Banner"
+            android:layout_marginBottom="24dp" />
 
-        <!-- Amount Input -->
+        <!-- Slider Feedback -->
+        <TextView
+            android:id="@+id/tvSliderFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You're donating R100 — that feeds 2 people!"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+
+        <SeekBar
+            android:id="@+id/seekBarAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="950"
+            android:progress="100"
+            android:layout_marginBottom="16dp" />
+
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            app:boxStrokeColor="@color/BaseYellow"
-            app:hintTextColor="@color/BaseYellow">
+            app:boxStrokeColor="@color/BaseYellow">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editAmount"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:hint="Amount (ZAR)"
-                android:inputType="numberDecimal"
-                android:textColor="@color/black"
-                android:textColorHint="@color/dark_gray"
-                android:paddingVertical="16dp"/>
+                android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Select Payment Method"
+            android:text="Choose Payment Method"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/BaseYellow"
-            android:layout_marginBottom="16dp"
-            android:lineHeight="24sp"/>
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp" />
 
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardZapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="8dp">
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
 
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardZapper"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp"
-                app:cardBackgroundColor="#FFF8E1"
-                android:layout_marginBottom="12dp"
-                android:foreground="?attr/selectableItemBackground"
-                android:clickable="true">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="16dp">
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/ic_zapper"
+                    android:contentDescription="Zapper Logo"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="fitCenter" />
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/ic_zapper"
-                        android:layout_marginEnd="16dp"
-                        android:contentDescription="Zapper payment"
-                        app:tint="@color/Base"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Zapper"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:lineHeight="22sp"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Instant QR code payment"
-                            android:textSize="14sp"
-                            android:textColor="@color/dark_gray"
-                            android:lineHeight="18sp"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Zapper\nInstant QR Code Payment"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:lineHeight="22sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardPaypal"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPaypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp"
-                app:cardBackgroundColor="#FFF8E1"
-                android:layout_marginBottom="12dp"
-                android:foreground="?attr/selectableItemBackground"
-                android:clickable="true">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="16dp">
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/ic_paypal"
+                    android:contentDescription="PayPal Logo"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="fitCenter" />
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/ic_paypal"
-                        android:layout_marginEnd="16dp"
-                        android:contentDescription="PayPal payment"
-                        app:tint="@null"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PayPal\nSecure Online Payment"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:lineHeight="22sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="PayPal"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:lineHeight="22sp"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardEft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Secure online payment"
-                            android:textSize="14sp"
-                            android:textColor="@color/dark_gray"
-                            android:lineHeight="18sp"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- EFT/Bank Card -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardEft"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp"
-                app:cardBackgroundColor="#FFF8E1"
-                android:foreground="?attr/selectableItemBackground"
-                android:clickable="true">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="16dp">
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/ic_bank"
+                    android:contentDescription="Bank Icon"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="fitCenter" />
 
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/ic_bank"
-                        android:layout_marginEnd="16dp"
-                        android:contentDescription="Bank transfer"
-                        app:tint="@color/Base"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Bank Transfer"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:lineHeight="22sp"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Direct EFT payment"
-                            android:textSize="14sp"
-                            android:textColor="@color/dark_gray"
-                            android:lineHeight="18sp"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bank Transfer\nDirect EFT Payment"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:lineHeight="22sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
 
         <TextView
@@ -256,9 +210,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/BaseYellow"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="12dp"
-            android:lineHeight="24sp"/>
+            android:layout_marginBottom="12dp" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -274,81 +226,35 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <TextView
-                    android:layout_width="match_parent"
+                <TextView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="• 70% - Food and Essentials"
+                    android:text="• 70% - Food and Essentials\n• 20% - Delivery and Logistics\n• 10% - Community Education"
                     android:textSize="15sp"
                     android:textColor="#6B4F00"
-                    android:lineHeight="22sp"
-                    android:layout_marginBottom="4dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="• 20% - Delivery and Logistics"
-                    android:textSize="15sp"
-                    android:textColor="#6B4F00"
-                    android:lineHeight="22sp"
-                    android:layout_marginBottom="4dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="• 10% - Community Education"
-                    android:textSize="15sp"
-                    android:textColor="#6B4F00"
-                    android:lineHeight="22sp"/>
+                    android:lineHeight="24sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Stats Section -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="24dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🌍 12,000+ Meals Delivered"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:lineHeight="20sp"
-                android:layout_marginEnd="16dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="👥 300+ Volunteers"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:lineHeight="20sp"/>
-        </LinearLayout>
-
-        <!-- Donate Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDonate"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:text="DONATE NOW"
             android:textColor="@android:color/white"
-            app:cornerRadius="8dp"
+            app:cornerRadius="12dp"
             android:backgroundTint="@color/Base"
-            android:textAllCaps="false"
-            android:layout_marginBottom="24dp"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
 
-        <!-- Thank You Message -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Thank you for your compassion and generosity. ❤️"
+            android:text="Thank you for your compassion and generosity ❤️"
             android:textSize="14sp"
             android:textColor="@color/dark_gray"
             android:gravity="center"
-            android:lineHeight="20sp"/>
+            android:lineHeight="20sp" />
     </LinearLayout>
 </ScrollView>

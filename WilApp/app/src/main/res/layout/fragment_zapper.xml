@@ -10,47 +10,63 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="24dp"
+        android:gravity="center_horizontal">
 
-
+        <!-- Title -->
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pay with Zapper"
-            android:textSize="24sp"
+            android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="@color/BaseYellow"
-            android:gravity="center"
-            android:layout_marginBottom="24dp"/>
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="16dp" />
 
-
+        <!-- Zapper Logo -->
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
             android:src="@drawable/ic_zapper"
-            android:layout_gravity="center"
-            android:layout_marginBottom="24dp"/>
+            android:contentDescription="Zapper Logo"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="24dp" />
 
-
-        <TextView
+        <!-- Instructions Card -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="How to pay with Zapper:"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginBottom="8dp"/>
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="24dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1. Open the Zapper app\n2. Tap 'Scan to Pay'\n3. Point your camera at this code\n4. Confirm the amount and pay"
-            android:textSize="16sp"
-            android:textColor="@color/dark_gray"
-            android:lineSpacingExtra="4dp"
-            android:layout_marginBottom="24dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How to pay with Zapper:"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="12dp" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Open the Zapper app\n2. Tap 'Scan to Pay'\n3. Point your camera at the QR code\n4. Confirm the amount and pay"
+                    android:textSize="16sp"
+                    android:textColor="@color/dark_gray"
+                    android:lineSpacingExtra="6dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Recipient Info -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,7 +74,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -67,17 +83,17 @@
             android:textSize="16sp"
             android:textColor="@color/dark_gray"
             android:lineSpacingExtra="4dp"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="32dp" />
 
-
+        <!-- Confirm Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCompletePayment"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="I've Completed Payment"
+            android:text="I’ve Completed Payment"
             android:textColor="@android:color/white"
-            app:cornerRadius="8dp"
+            app:cornerRadius="12dp"
             android:backgroundTint="@color/Base"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
     </LinearLayout>
 </ScrollView>
