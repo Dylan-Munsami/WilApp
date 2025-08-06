@@ -73,7 +73,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Vision & Values Section -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -221,34 +221,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Founder Quote -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="16dp"
-            android:background="@drawable/bg_quote">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="“We started this trust with nothing but heart — and today, thanks to people like you, hope is growing across the country.”"
-                android:textSize="16sp"
-                android:textStyle="italic"
-                android:textColor="#666666"
-                android:textAlignment="center"
-                android:layout_marginBottom="8dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="- Founder, I.C. Norath Charitable Trust"
-                android:textSize="14sp"
-                android:textColor="@color/BaseYellow"
-                android:textStyle="bold"
-                android:textAlignment="center"/>
-        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.volunteer.VolunteerFragment"
+    android:padding="16dp"
     android:background="#FFFDE7"
-    android:padding="16dp">
+    tools:context=".ui.volunteer.VolunteerFragment">
 
-
+    <!-- Top Banner Image -->
+    <ImageView
+        android:id="@+id/bannerImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/signup"
+        android:contentDescription="Sign Up Banner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Page Title -->
     <TextView
@@ -19,25 +30,39 @@
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#FBC02D"
+        app:layout_constraintTop_toBottomOf="@id/bannerImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Subtitle Description -->
+    <TextView
+        android:id="@+id/text_volunteer_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Be part of something meaningful. Sign up to volunteer and help make a difference in your community."
+        android:textSize="14sp"
+        android:textColor="#555555"
         android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/text_volunteer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginBottom="12dp"/>
 
-    <!-- Card to hold form -->
+    <!-- CardView with the Form -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardVolunteerForm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:padding="16dp"
         android:backgroundTint="#FFFFFF"
+        android:padding="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
-        app:layout_constraintTop_toBottomOf="@id/text_volunteer"
+        app:layout_constraintTop_toBottomOf="@id/text_volunteer_desc"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -55,7 +80,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editFullName"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Email -->
@@ -71,7 +96,7 @@
                     android:id="@+id/editEmail"
                     android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Phone -->
@@ -87,14 +112,14 @@
                     android:id="@+id/editPhone"
                     android:inputType="phone"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Availability -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Availability"
+                android:hint="Availability (e.g. weekends, weekdays)"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:boxStrokeColor="#FBC02D"
                 android:layout_marginTop="12dp">
@@ -102,7 +127,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editAvailability"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Submit Button -->
@@ -111,10 +136,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Submit"
-                android:layout_marginTop="20dp"
                 android:textColor="#FFFFFF"
+                android:layout_marginTop="20dp"
                 android:backgroundTint="#FBC02D"
-                app:cornerRadius="12dp" />
+                app:cornerRadius="12dp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
